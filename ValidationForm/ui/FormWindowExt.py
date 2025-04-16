@@ -7,11 +7,10 @@ from ui.MainWindowExt import MainWindowExt
 
 
 class FormWindowExt(Ui_MainWindow):
-    def __init__(self):
-        self.sub_mainwindow = None
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
+        self.sub_mainwindow = None
         self.setupSignAndSlots()
     def setupSignAndSlots(self):
         self.pushButton.clicked.connect(self.login)
